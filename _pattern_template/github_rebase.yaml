@@ -1,0 +1,25 @@
+command_110:
+    _working_dir_: /Users/jian.huang/projects_poc/dw
+    _command_:
+        - cd /Users/jian.huang/projects/{{ PROJECT_ID }}/dw && git checkout {{ GITHUB_BRANCH }}
+
+command_120:
+    _working_dir_: /Users/jian.huang/projects_poc/dw
+    _command_:
+        - cd /Users/jian.huang/projects/{{ PROJECT_ID }}/dw && git pull
+
+command_130:
+    _working_dir_: /Users/jian.huang/projects_poc/dw
+    _command_:
+        - cd /Users/jian.huang/projects/{{ PROJECT_ID }}/dw && git merge origin/master -m {{ GIT_COMMENTS }}
+
+command_140:
+    _working_dir_: /Users/jian.huang/projects_poc/dw
+    _command_:
+        - cd /Users/jian.huang/projects/{{ PROJECT_ID }}/dw && git push
+
+
+
+
+
+

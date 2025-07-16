@@ -1,0 +1,10 @@
+command_50:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python tubi_enhance_notebook.py --profile_name {{ PROFILE_NAME }} --notebook_filepath {{ DW_HOME }}/dw/tubibricks/src --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --model_dir {{ MODEL_DIR }}"
+
+command_180:
+  _working_dir_: "{{ DW_HOME }}/dw/tubibricks"
+  _command_:
+    - cd {{ DW_HOME }}/dw/tubibricks && /System/Volumes/Data/opt/homebrew/Cellar/databricks/0.230.0/bin/databricks bundle deploy --target {{ BUNDLE_DEPLOY_TGT }}
+

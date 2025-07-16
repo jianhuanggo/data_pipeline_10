@@ -1,0 +1,62 @@
+command_10:
+  _command_:
+    - mkdir -p {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/
+
+command_20:
+  _command_:
+    - mkdir -p /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_30:
+  _ignore_error_: True
+  _command_:
+    - cp {{ DW_HOME }}/dw/tubibricks/models/{{ MODEL_DIR }}/{{ MODEL_NAME }}.sql /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_40:
+  _ignore_error_: True
+  _command_:
+    - cp {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/* /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_50:
+  _ignore_error_: True
+  _command_:
+    - cp {{ DW_HOME }}/dw/tubibricks/resources/{{ MODEL_NAME }}.yml /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_60:
+  _command_:
+    - rm -rf {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/
+
+command_70:
+  _command_:
+    - cd {{ DW_HOME }}/dw
+
+command_80:
+  _working_dir_: "{{ DW_HOME }}/dw"
+  _command_:
+    - cd {{ DW_HOME }}/dw && git checkout {{ GITHUB_BRANCH }}
+
+
+command_90:
+  _command_:
+    - mkdir -p {{ DW_HOME }}/dw/tubibricks/models/{{ MODEL_DIR }}
+
+
+command_100:
+  _command_:
+    - cd {{ DW_HOME }}/dw/tubibricks/models/{{ MODEL_DIR }}
+
+command_110:
+  _working_dir_: "{{ DW_HOME }}/dw"
+  _timeout_: "1800"
+  _command_:
+    - "cd {{ DW_HOME }}/dw/tubibricks && dbt run -m {{ MODEL_NAME }} --vars '{start_date: ''2024-01-01'', end_date: ''2023-12-01''}' --target {{ DEPLOYMENT_ENV }} --debug"
+
+command_200:
+  _working_dir_: "{{ DW_HOME }}/dw"
+  _timeout_: "7200"
+  _command_:
+    - cd {{ DW_HOME }}/dw && pipenv run workflow --project tubibricks --target {{ DEPLOYMENT_ENV }} --job_name {{ MODEL_NAME }} --command run --selectors '{{ MODEL_NAME }}' --start {{ START_DATE }} --end {{ END_DATE }} {{ TIME_INTERVAL }} --enabled_notifications false
+
+command_220:
+  _command_:
+    - echo {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/
+

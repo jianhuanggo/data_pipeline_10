@@ -1,0 +1,55 @@
+command_30:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-02-02' and '2021-03-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_02_02"
+
+command_40:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-03-02' and '2021-04-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_03_02"
+
+command_50:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-04-02' and '2021-05-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_04_02"
+
+command_60:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-05-02' and '2021-06-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_05_02"
+
+command_70:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-06-02' and '2021-07-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_06_02"
+
+command_80:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-07-02' and '2021-08-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_07_02"
+
+command_90:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-08-02' and '2021-09-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_08_02"
+
+command_100:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-09-02' and '2021-10-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_09_02"
+
+
+command_110:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-10-02' and '2021-11-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_10_02"
+
+command_120:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-11-02' and '2021-12-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_11_02"
+
+command_130:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query.py --profile_name {{ PROFILE_NAME }} --additional_where_clause \"date BETWEEN '2021-12-02' and '2022-01-01'\" --job_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/history_load_job.json --wait_time_between_sql 10 --table_suffix _2021_12_02"

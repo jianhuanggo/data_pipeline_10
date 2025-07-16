@@ -1,0 +1,58 @@
+---
+name: "core_metrics"
+require-dbt-version: ">=1.0.0"
+version: 0.7.403
+config-version: 2
+
+profile: "default"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+
+vars:
+  # If start_date is passed at the command line, DBT will filter source data for all models starting inclusive of
+  # this date. Format is YYYY-MM-DD or "YYYY-MM-DD HH:MM:SS" format.
+  start_date: ""
+  # If end_date is passed at the commnad line, DBT will filter source data for all models ending exclusive of the
+  # end date. Format is YYYY-MM-DD or "YYYY-MM-DD HH:MM:SS" format.
+  end_date: ""
+  # Max Interval is the default interval that any DBT query processes for an incremental run.
+  # Currently only supports days as the date part. If full-refresh is used (or incremental with
+  # no tables) will not be used. For all_metric_hourly full-refresh always use a date range.
+  max_interval: "35 days"
+  # Lag - instructs how long current richevent lag is. Higher will run more hours to ensure data is updated.
+  #       Must be a single number in hours and cannot be larger than 24. (This would be break spectrum query.)
+  lag: "0"
+  # this var is especially for ml feature enrichment. Format is yyyy-MM-dd
+  feature_date: ""
+  # viewer threshold var for anonymization for fox datashare
+  viewer_threshold: 10
+
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+models:
+  bind: false
+  +grants:
+    all: ["dbtcloud"]
+    select: ["group readonlyaccounts", "group airflow_group", "group periscope_group", "group periscope_locked_group"]
+  +post-hook:
+    - "{{ core_utils.alter_relation_owner(['dbtcloud']) }}"
+  core_metrics:
+    okr:
+      schema: okr
+      bind: false
+    content_avails:
+      schema: content_avails
+      bind: false
+
+query-comment:
+  comment: "{{ query_comment(node) }}"
+  append: true

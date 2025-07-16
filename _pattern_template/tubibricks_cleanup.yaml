@@ -1,0 +1,34 @@
+command_10:
+  _command_:
+    - mkdir -p {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/
+
+command_20:
+  _command_:
+    - mkdir -p /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_30:
+  _ignore_error_: True
+  _command_:
+    - cp {{ DW_HOME }}/dw/tubibricks/models/{{ MODEL_DIR }}/{{ MODEL_NAME }}.sql /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_40:
+  _ignore_error_: True
+  _command_:
+    - cp {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/* /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_50:
+  _ignore_error_: True
+  _command_:
+    - cp {{ DW_HOME }}/dw/tubibricks/resources/{{ MODEL_NAME }}.yml /Users/jian.huang/projects/backup/{{ PROJECT_ID }}/{{ DEPLOYMENT_ENV }}
+
+command_60:
+  _command_:
+    - rm -rf {{ DW_HOME }}/dw/tubibricks/src/{{ MODEL_NAME }}/models/{{ MODEL_DIR }}/
+
+command_130:
+  _working_dir_: "{{ DW_HOME }}/dw/tubibricks"
+  _command_:
+    - cd {{ DW_HOME }}/dw/tubibricks && /System/Volumes/Data/opt/homebrew/Cellar/databricks/0.230.0/bin/databricks bundle deploy --target {{ BUNDLE_DEPLOY_TGT }}
+
+
+

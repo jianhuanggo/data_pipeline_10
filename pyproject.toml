@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "pg-aws-lib"
+version = "0.1.0"
+description = ""
+authors = ["Jian Huang"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "~3.11"
+pyyaml = "^6.0.1"
+pandas = "^2.1.4"
+pygithub = "^2.1.1"
+boto3 = "^1.35.34"
+jinja2 = "^3.1.4"
+networkx = "^3.4.1"
+matplotlib = "^3.9.2"
+apache-airflow = "^2.10.2"
+pydantic = "^2.9.2"
+faiss-cpu = "^1.9.0"
+sentence-transformers = "^3.2.0"
+sqlfluff = "^3.2.5"
+databricks-sdk = "^0.36.0"
+pyspark = "^3.5.3"
+tubi-databricks = "^0.1.27"
+psycopg2 = "^2.9.10"
+databricks-connect = "^15.4.3"
+plotly = "^5.24.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

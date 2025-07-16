@@ -1,0 +1,9 @@
+command_20:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python get_table_schema_from_databricks.py --profile_name {{ PROFILE_NAME }} --table_name {{ TABLE_NAME }} --output_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/table_schema_{{ MODEL_NAME }}.json --output_format ddl"
+
+command_30:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python gen_tubibricks_manifest.py --profile_name {{ PROFILE_NAME }} --model_name {{ MODEL_NAME }} --model_description {{ MODEL_DESCRIPTION }} --manifest_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/dw/tubibricks/models/{{ MODEL_DIR }}/{{ MODEL_DIR }}.yml --table_def_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/table_schema_{{ MODEL_NAME }}.json --output_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/dw/tubibricks/models/{{ MODEL_DIR }}/{{ MODEL_DIR }}.yml"

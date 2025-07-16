@@ -1,0 +1,1 @@
+according to the current best practice deploying table to databricks, please deploy following sql into databricks dev environment
