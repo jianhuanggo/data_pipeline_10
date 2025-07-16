@@ -1,0 +1,35 @@
+command_30:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2021_08_01_2021_10_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2021-08-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2021-10-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2021-08-01\" --end_date \"2021-10-01\""
+
+command_40:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2021_10_01_2021_12_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2021-10-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2021-12-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2021-10-01\" --end_date \"2021-12-01\""
+
+command_50:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2021_12_01_2022_02_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2021-12-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2022-02-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2021-12-01\" --end_date \"2022-02-01\""
+
+command_60:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2022_02_01_2022_04_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2022-02-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2022-04-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2022-02-01\" --end_date \"2022-04-01\""
+
+command_70:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2022_04_01_2022_06_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2022-04-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2022-06-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2022-04-01\" --end_date \"2022-06-01\""
+
+command_80:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2022_06_01_2022_08_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2022-06-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2022-08-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2022-06-01\" --end_date \"2022-08-01\""
+
+command_90:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python run_databricks_query_hl.py --profile_name {{ PROFILE_NAME }}  --query_string \"create or replace table hive_metastore.tubidw_dev.z_hl_807266_adserver_bid_events_2022_08_01_2022_10_01 as select * from hive_metastore.datalake.adserver_bid_events where TO_DATE(date, 'yyyy-MM-dd') >= DATE_TRUNC('day', TO_DATE('2022-08-01', 'yyyy-MM-dd')) AND TO_DATE(date, 'yyyy-MM-dd') < DATE_TRUNC('day', TO_DATE('2022-10-01', 'yyyy-MM-dd'))\" --wait_time_between_sql 10 --start_date \"2022-08-01\" --end_date \"2022-10-01\""
+

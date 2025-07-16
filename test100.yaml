@@ -1,0 +1,615 @@
+version: 2
+models:
+- name: adserver_metrics_daily
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null
+- name: adserver_mutable_dimension_deal_id
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis for
+    deal id
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: mutable_dimension
+    description: mutable dimension
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null
+- name: adserver_mutable_dimension_integration_type
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis for
+    integration type
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: mutable_dimension
+    description: mutable dimension
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null
+- name: adserver_mutable_dimension_line_item_id
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis for
+    line item id
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: mutable_dimension
+    description: mutable dimension
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null
+- name: adserver_mutable_dimension_revenue_stream
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis for
+    revenue stream
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: mutable_dimension
+    description: mutable dimension
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null
+- name: adserver_mutable_dimension_user_targeting
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis for
+    user targeting
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: mutable_dimension
+    description: mutable dimension
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null
+- name: adserver_mutable_dimension_ad_source_name
+  description: This aggregated table with the desired dimensions and metrics will
+    speed up the querying and can be used in dashboards and also ad-hoc analysis for
+    ad source name
+  columns:
+  - name: ds
+    description: date
+    data_tests:
+    - not_null
+  - name: platform
+    description: impression platform
+  - name: mutable_dimension
+    description: mutable dimension
+  - name: country
+    description: country
+  - name: city
+    description: city name
+  - name: subdivision
+    description: geo subdivision
+  - name: dma
+    description: geo dma
+  - name: language
+    description: language
+  - name: autoplay_on
+    description: aautoplay is turned on
+  - name: content_genres
+    description: genres of the content
+  - name: content_ratings
+    description: ratings of the content
+  - name: content_type
+    description: '{{ doc(''dim__content_type'') }}'
+  - name: device_type
+    description: device type
+  - name: revenue_vertical
+    description: revenue vertical
+  - name: ramp_id_type
+    description: ramp id type
+  - name: identity_data_source
+    description: identity data source
+  - name: ad_opportunity_reason
+    description: ad opportunity reason
+  - name: opt_out
+    description: opt out
+  - name: is_coppa
+    description: is coppa
+  - name: coppa_enabled
+    description: coppa enabled
+  - name: ad_break_position
+    description: ads break position
+  - name: user_gender
+    description: user gender
+  - name: targeted_seq_pos
+    description: targeted seq pos
+  - name: device_deal
+    description: device deal
+  - name: remnant_status
+    description: remnant status
+  - name: autoplay_idx
+    description: autoplay idx
+  - name: tracking_mode
+    description: tracking mode
+  - name: app_mode
+    description: app mode
+  - name: logged_status
+    description: logging status
+  - name: postal_code
+    description: '{{ doc(''dim__postal_code'') }}'
+  - name: user_age
+    description: user age
+  - name: bid_requests
+    description: bid requests
+  - name: ad_breaks
+    description: ad breaks
+  - name: total_bid_responses
+    description: total bid responses
+  - name: valid_bid_responses
+    description: valid bid responses
+  - name: winning_bids
+    description: number of winning bids
+  - name: revenue
+    description: revenue
+  - name: _last_updated
+    description: Date of most recent update of a particular row
+  - name: _id
+    description: internal use
+    data_tests:
+    - unique
+    - not_null

@@ -1,0 +1,9 @@
+command_110:
+    _working_dir_: /Users/jian.huang/projects_poc/dw/tubibricks
+    _command_:
+        - cd {{ DW_HOME }}/dw/tubibricks && /System/Volumes/Data/opt/homebrew/Cellar/databricks/0.230.0/bin/databricks bundle deploy --target {{ BUNDLE_DEPLOY_TGT }}
+
+command_120:
+    _ignore_error_: True
+    _command_:
+        - echo1 "the deployment process is successful"

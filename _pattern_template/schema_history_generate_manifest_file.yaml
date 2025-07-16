@@ -1,0 +1,18 @@
+command_10:
+  _working_dir_: "{{ DW_HOME }}/dw"
+  _timeout_: "1800"
+  _command_:
+    - "cd {{ DW_HOME }}/dw/tubibricks && dbt run -m {{ MODEL_NAME }} --vars '{start_date: ''2024-01-01'', end_date: ''2023-12-01''}' --target {{ DEPLOYMENT_ENV }} --debug"
+
+command_20:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python get_table_schema_from_databricks.py --table_name {{ TABLE_NAME }} --profile_name {{ PROFILE_NAME }} --output_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/table_schema_{{ MODEL_NAME }}.json --output_format ddl"
+
+command_30:
+  _working_dir_: "/Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2"
+  _command_:
+    - "cd /Users/jian.huang/miniconda3/envs/{{ PROJECT_ID }}/aws_lib_2 && python gen_macro_schema_history.py --profile_name {{ PROFILE_NAME }} --domain_name {{ MODEL_DIR }} --schema_name 'sss' --model_name {{ MODEL_NAME }} --table_def_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/playground/table_schema_{{ MODEL_NAME }}.json --output_filepath /Users/jian.huang/projects/{{ PROJECT_ID }}/dw/schema_history/macros/{{ MODEL_DIR }}/{{ MODEL_DIR }}_20241213203812__create_table_{{ MODEL_NAME }}.sql"
+
+
+

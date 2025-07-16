@@ -1,0 +1,12 @@
+label_1:
+  _ignore_error_: True
+  _timeout_: "10"
+  _working_dir_: /Users/jian.huang/projects
+  _command_:
+    - sleep1 30
+
+
+label_2:
+  _working_dir_: /Users/jian.huang/projects
+  _command_:
+    - echo "2 testing..."
