@@ -1,0 +1,71 @@
+Based on our conversation, here is my proposal for the team: In addition to supporting dataops tickets, each team member will be assigned to a project that aligns with their individual skill set, as well as the overall goals and pain points of the team. This is to ensure that we make meaningful progress on strategic initiatives while continuing to support day to day operational needs.
+
+
+1) Projects:
+
+a) Designing the Next Generation Data Pipeline
+
+Owner: Jian
+Support: Edward
+
+I will lead the system design efforts for the next generation data pipeline and will serve as the data architect and product owner for this initiative.
+
+
+b) Migration of existing dataflow from China team
+
+Owner: Danny
+Support: Jian, Edward
+
+Given Danny’s strong rapport with our engineering counterparts in China and his solid coordination skill set which well align with leading the migration efforts. Danny should able to lead this project with support from us.
+
+Note: Given the year end target for this project and the fact that the team is newly formed, we should establish an internal deadline of mid-November to account for uncertainties and the potential of "unknown unknowns." Since our available resources are fixed, I recommend that Danny evaluate the scope of work he can realistically commit to within the constraints and present a proposed plan to the team. This will help ensure alignment and allow us to make informed decisions about prioritization and resourcing.
+
+c) Improve our efficiency of adhoc request
+
+Owner: Caroline
+Support: Danny, Jian, Edward
+
+I would like Caroline to take the lead on improving the efficiency of our ad hoc query workflows. She previously mentioned that she has experience building AWS data pipelines and enjoys experimenting with different AWS components. Given her background and enthusiasm in this area, I believe she is well-suited to identify performance bottlenecks, optimize data access patterns, and explore solutions that can help streamline our current ad hoc query process.
+
+d) Improve system's self healing capabilities
+
+Owner: Deyvn
+Support: Jian, Edward
+
+Conducting in depth research with the goal of developing a comprehensive understanding of the question and answering (QA) use case within the field of deep learning. This includes exploring key components such as language modeling, context retrieval, semantic understanding, and answer generation. Through this research, the team aims to gain both theoretical and practical insights into system architectures, training techniques such as reinforcement learning with human feedback and evaluation methods that enhance performance, specifically in the context of developing self-healing capabilities for autonomic data systems.
+
+
+2) Hiring and Onboarding New Resources
+
+Ownership: Jian
+Support: Edward
+
+Jian will oversee the hiring process and ensure effective ramp up of new team members.
+
+3) Team Training and Skill Development
+
+Responsible: Jian
+Support: Edward
+
+improving core programming skills and system design capabilities to build better, more scalable systems
+develop a stronger understanding of data infrastructure, including how to manage data, test systems, and ensure reliability.
+gain knowledge of machine learning and how to finetune models for practical use.
+
+
+
+
+
+Danny,
+
+
+In addition to supporting ad hoc tickets, I would like you to take the lead on the migration project in partnership with the China team. Our target completion date is mid Nov, so I would appreciate it if you could help strategize and develop a plan to ensure we stay on track. Would it be possible for you to draft a high level plan for us to review together by the end of this week?
+
+The plan should include the following:
+
+Scope: This doesn't need to go down to the table level, but should provide a clear overview of what will be migrated.
+
+Risks and Trade offs: Highlight any potential challenges or compromises we should be aware of
+
+Support: Specify any support you need from us
+
+Let me know if you have any questions or need clarification.
