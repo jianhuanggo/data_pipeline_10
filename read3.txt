@@ -1,0 +1,21 @@
+aws_deployment_2
+----------------------
+export AWS_ACCESS_KEY_ID=xxx
+export AWS_SECRET_ACCESS_KEY=xxx
+
+github: https://github.com/jianhuanggo/aws_deployment_2
+env: conda activate aws_deployment_2
+path: cd /Users/jianhuang/anaconda3/envs/aws_deployment_2/aws_deployment_2
+
+
+
+python apply_pattern_lambda.py --project_filepath /Users/jianhuang/anaconda3/envs/pg_api_metadata_get/pg_api_metadata_get  --project_name pg_api_metadata_get --aws_account_number aaaa --aws_region us-east-1
+
+
+
+command: python apply_pattern.py --project_filepath /Users/jianhuang/anaconda3/envs/pg_api_metadata_get/pg_api_metadata_get --project_name pg_api_metadata_get
+
+
+command: python apply_pattern_streamlit.py --project_filepath /Users/jianhuang/anaconda3/envs/pg-wa-make-story-1/pg-wa-make-story-1 --project_name pg_wa_make_story_1 --aws_account_number aaa --aws_region us-east-1
+command: python apply_pattern_webapp.py --project_filepath /Users/jianhuang/projects/ui/pg_website_react2/template/vertical_timeline --project_name react-app --aws_account_number aaa --aws_region us-east-1
+
